@@ -32,7 +32,7 @@
   padding-right: 2px;
 }
 
-.button-group__button.page-tabs__tab_active {
+.button-group__button.button-group__button_active {
   background-color: var(--blue);
 }
 
@@ -42,11 +42,11 @@
 }
 
 .button-group__button:hover,
-.button-group__button.page-tabs__tab_active {
+.button-group__button.button-group__button_active {
   background-color: var(--blue);
 }
 
 .button-group__button:hover svg,
-.button-group__button.page-tabs__tab_active svg {
+.button-group__button.button-group__button_active svg {
   fill: var(--white);
 }
