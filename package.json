@@ -3,7 +3,7 @@
   "version": "4.0.0",
   "private": true,
   "description": "Taskbook for Vue 3 Course on learn.javascript.ru ",
-  "author": "Grigorii K. Shartsev",
+  "author": "Grigorii K. Shartsev <g.shartsev@javascript.info>",
   "scripts": {
     "file-serve": "serve",
     "serve": "vue-cli-service serve",
