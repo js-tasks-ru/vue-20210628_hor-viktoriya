@@ -9,6 +9,10 @@
       "destination": "/src/assets/icons/:rest"
     },
     {
+      "source": "/assets/fonts/:rest",
+      "destination": "/src/assets/fonts/:rest"
+    },
+    {
       "source": "/images/:rest",
       "destination": "/public/images/:rest"
     }
