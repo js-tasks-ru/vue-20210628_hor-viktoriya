@@ -12,7 +12,7 @@ const RootComponentOptions = defineComponent({
   },
 
   methods: {
-    incrementValue: function() {
+    incrementValue: function () {
       this.value += 1;
     },
   },

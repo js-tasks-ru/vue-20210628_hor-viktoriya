@@ -1,4 +1,4 @@
- import { createApp, defineComponent } from './vendor/vue.esm-browser.js';
+import { createApp, defineComponent } from './vendor/vue.esm-browser.js';
 
 // Создайте Vue приложение
 const RootComponentOptions = defineComponent({
