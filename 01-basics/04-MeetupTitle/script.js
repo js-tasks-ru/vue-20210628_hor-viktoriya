@@ -2,7 +2,17 @@ import { createApp, defineComponent } from './vendor/vue.esm-browser.js';
 
 const API_URL = 'https://course-vue.javascript.ru/api';
 
-// Требуется создать Vue приложение
+function fetchMeetupById(meetupId) {
+  return fetch(`${API_URL}/meetups/${meetupId}`).then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      return response.json().then((error) => {
+        throw error;
+      });
+    }
+  });
+}
 
 const RootAppComponent = defineComponent({
   name: 'Root',
@@ -17,23 +27,15 @@ const RootAppComponent = defineComponent({
   watch: {
     meetupId: {
       handler() {
-        this.fetchMeetupById();
+        this.callFetchMeetupById();
       },
     },
   },
 
   methods: {
-    fetchMeetupById() {
-      return fetch(`${API_URL}/meetups/${this.meetupId}`).then((response) => {
-        if (response.ok) {
-          response.json().then((data) => {
-            this.meetup = data;
-          });
-        } else {
-          return response.json().then((error) => {
-            throw error;
-          });
-        }
+    callFetchMeetupById() {
+      return fetchMeetupById(this.meetupId).then((data) => {
+        this.meetup = data;
       });
     },
   },
