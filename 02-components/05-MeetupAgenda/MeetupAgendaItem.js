@@ -14,18 +14,12 @@ export default defineComponent({
     },
   },
 
-  methods: {
-    timeRange(start, end) {
-      return `${start} - ${end}`;
-    },
-  },
-
   template: `
     <div class="agenda-item">
       <div class="agenda-item__col">
         <img :src="\`/assets/icons/icon-\${$options.agendaItemIcons[agendaItem.type]}.svg\`" class="icon" :alt="agendaItem.type" />
       </div>
-      <div class="agenda-item__col">{{ timeRange(agendaItem.startsAt, agendaItem.endsAt) }}</div>
+      <div class="agenda-item__col">{{ agendaItem.startsAt }} - {{ agendaItem.endsAt }}</div>
       <div class="agenda-item__col">
         <h3 v-if="agendaItem.title" class="agenda-item__title">{{ agendaItem.title }}</h3>
         <h3 v-else class="agenda-item__title">{{ $options.agendaItemDefaultTitles[agendaItem.type] }}</h3>
